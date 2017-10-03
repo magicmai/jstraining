@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+    <script src="babel.min.js"></script>
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        class MyTitle extends React.Component {
+            constructor(...args) {
+                super(...args);
+                this.state = {
+                    text: 'World'
+                };
+            }
+
+            time() {
+                let t = new Date();
+                return Date.toLocaleDateString(t);
+            }
+
+            handleClick() {
+                this.setState({
+                    text: time()
+                });
+            }
+
+            render() {
+                return <h1 onClick={this.handleClick.bind(this)}>
+                    {'Hello ' + this.state.text}
+                </h1>;
+            }
+        };
+
+        ReactDOM.render(
+            <MyTitle/>,
+            document.getElementById('example')
+        );  
+    </script>
+</body>
+</html>
