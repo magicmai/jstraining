@@ -168,7 +168,7 @@ handleChange(e) {
 
 `this.setState`方法用来重置`this.state`，每次调用这个方法，就会引发组件的重新渲染。
 
-## React 组件实战
+## React 组件实战【已完成】
 
 ### 实验目的
 
@@ -215,7 +215,7 @@ this.setState({
 });
 ```
 
-## React 组件的生命周期
+## React 组件的生命周期【已完成】
 
 ### 实验目的
 
@@ -279,7 +279,7 @@ projects.forEach(p => {
 </div>
 ```
 
-## ReCharts
+## ReCharts【已完成】
 
 ### 实验目的
 

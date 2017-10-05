@@ -9,22 +9,28 @@
 <body>
     <div id="example"></div>
     <script type="text/babel">
+        
+        var d, year, month, date, t;
+        d = new Date();
+        year = d.getFullYear();
+        month = d.getMonth() + 1;
+        date = d.getDate();
+        t = year + '年' + month + '月' + date + '日';
+
         class MyTitle extends React.Component {
             constructor(...args) {
                 super(...args);
                 this.state = {
-                    text: 'World'
+                    text: 'World',
+                    isClicked: false
                 };
-            }
-
-            time() {
-                let t = new Date();
-                return Date.toLocaleDateString(t);
-            }
+            }            
 
             handleClick() {
+                let isClicked = !this.state.isClicked;
                 this.setState({
-                    text: time()
+                    isClicked: isClicked,
+                    text: isClicked? t : 'World'
                 });
             }
 
